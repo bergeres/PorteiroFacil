@@ -1,0 +1,20 @@
+PORTEIRO FACIL - CORRECAO DO ERRO "Task '>' not found"
+
+CAUSA:
+O símbolo > foi interpretado pelo Gradle como se fosse o nome de uma tarefa.
+Ele deve ser usado somente como separador visual do menu do Android Studio.
+
+NAO USE NO TERMINAL:
+Build > Build App Bundles or APKs > Build APKs
+
+USE NO TERMINAL WINDOWS:
+gradle :app:assembleDebug
+
+OU, SE O WRAPPER ESTIVER COMPLETO:
+gradlew.bat :app:assembleDebug
+
+ATALHO ADICIONADO AO PROJETO:
+gradle apkDebug
+
+APK GERADO EM:
+app\build\outputs\apk\debug\app-debug.apk

@@ -1,0 +1,33 @@
+PORTEIRO FACIL - CORRECAO DEFINITIVA DO ERRO "Task '>' not found"
+
+O erro significa que o Android Studio salvou o caractere > como se fosse uma tarefa Gradle.
+Nao e um erro no codigo Kotlin do aplicativo.
+
+CORRECAO RECOMENDADA
+1. Feche o Android Studio.
+2. Execute LIMPAR_CONFIGURACAO_ANDROID_STUDIO.bat.
+3. Reabra ESTA pasta PorteiroFacil_Corrigido como um novo projeto.
+4. Aguarde o Gradle Sync finalizar.
+5. Abra Run > Edit Configurations.
+6. Exclua qualquer configuracao do tipo Gradle que tenha > no nome ou no campo Tasks.
+7. Para rodar o app, use uma configuracao do tipo Android App, modulo app.
+
+PARA GERAR O APK PELO ANDROID STUDIO
+Clique, com o mouse, nos menus Build e depois na opcao de gerar APK.
+O caractere > quando aparece em instrucoes significa apenas 'depois clique em'.
+NAO cole uma sequencia de menus no campo Gradle Tasks.
+
+PARA GERAR POR TAREFA GRADLE
+A tarefa correta e:
+:app:assembleDebug
+
+Tambem existe neste projeto o atalho:
+apkDebug
+
+NUNCA use como tarefa:
+>
+Build > ...
+Generate > ...
+
+APK de debug esperado em:
+app\build\outputs\apk\debug\app-debug.apk

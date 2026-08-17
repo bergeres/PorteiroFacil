@@ -1,0 +1,17 @@
+PORTEIRO FACIL - GERAR APK NO GITHUB
+
+1. Extraia este pacote no computador.
+2. Abra o repositorio berderes/PorteiroFacil no GitHub.
+3. Clique em Add file > Upload files.
+4. Arraste TODO o conteudo desta pasta extraida para a pagina, inclusive a pasta .github.
+5. Clique em Commit changes.
+6. Abra a aba Actions.
+7. O workflow "Gerar APK Porteiro Facil" iniciara automaticamente no push para main.
+   Se nao iniciar: Actions > Gerar APK Porteiro Facil > Run workflow.
+8. Quando ficar verde, abra a execucao e baixe o artefato "PorteiroFacil-APK".
+9. Dentro do ZIP do artefato estara PorteiroFacil-debug.apk.
+
+IMPORTANTE:
+- Nao coloque o token da API no GitHub.
+- O token e configurado no aplicativo no primeiro acesso.
+- O workflow usa Java 17, Android SDK 35 e Gradle 8.9.
